@@ -35,6 +35,12 @@ nav {
   cursor: pointer;
 }
 
+#profile {
+  border-radius: 100%;
+  width: 32px;
+  height: 32px;
+}
+
 .search {
   width: 100%;
   display: flex;

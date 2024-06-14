@@ -1,11 +1,12 @@
 Chart.defaults.font.family = "Nunito";
+Chart.defaults.color = "#000";
 
 const section = document.getElementById("chart");
 const config = {
   type: "bar",
   data: {
-    labels: ["Bill", "Jeff", "Michael", "Tim", "Zuck"],
-    datasets: [{ labels: "numeros", data: [5, 2, 12, 10, 3] }],
+    labels: ["1A", "1B", "2A", "2B", "3A", "3C"],
+    datasets: [{ label: "Matriculas", data: [32, 35, 40, 30, 25, 31] }],
   },
   options: {
     responsive: true,

@@ -11,7 +11,8 @@
     <header>
       <nav class="container">
         <img src="./assets/img/logo.svg" alt="" class="logo" />
-        <div class="search">
+        <div class="search">          
+          <img src="./assets/img/160801224.jpeg" alt="profileimg" id="profile">
           <button id="hamburguerMenu" class="button header__button">
             <img src="./assets/icons/bars-solid.svg" alt="iconeMenu" />
           </button>
@@ -26,18 +27,30 @@
         <section class="applicationBox">
           <div class="userResume">
             <div>
-              <img src="./assets/img/160801224.jpeg" alt="" />
+              <img src="./assets/img/160801224.jpeg" alt="" id="userImg" />
             </div>
             <div class="userInfos">
-              <p>Nome: Bruno</p>
+              <p>Olá, Bruno!</p>
               <p>Cargo: Secretário</p>
               <p>Matrícula: 1230-44</p>
             </div>
           </div>
           <div class="menu__buttons user__buttons">
-            <button class="button">Matrículas</button>
-            <button class="button">Grade</button>
-            <button class="button">Informações</button>
+            <button class="button">
+              <img
+                src="./assets/icons/school-lock-solid.svg"
+                alt=""
+              />Matrículas
+            </button>
+            <button class="button">
+              <img src="./assets/icons/graduation-cap-solid.svg" alt="" />Grade
+            </button>
+            <button class="button">
+              <img
+                src="./assets/icons/school-lock-solid.svg"
+                alt=""
+              />Informações
+            </button>
           </div>
         </section>
 
@@ -80,11 +93,28 @@
     </main>
 
     <footer>
-      <p>Versão 1.0.0</p>
-      <p>Atualizado em 00/00/0000</p>
+      <div class="logos">
+        <img src="./assets/icons/facebook.svg" alt="" />
+        <img src="./assets/icons/instagram.svg" alt="" />
+        <img src="./assets/icons/twitter.svg" alt="" />
+        <img src="./assets/icons/whatsapp.svg" alt="" />
+        <a
+          href="https://github.com/DSM-Grupo-06-Projeto-Integrador-2024/dsm-grupo-6-pi"
+        >
+          <img src="./assets/icons/github.svg" alt="github icon" /> 
+        </a>
+      </div>
+      <div class="appInfos">
+        <small>Versão 1.0.0</small>
+        <small>Atualizado em 14/07/24</small>
+      </div>
+      <div>
+        <small>Made with &#x2764 by FATEC-ARARAS 2024</small>
+      </div>
     </footer>
+    
+  </body>
     <script type="module" src="./scripts/application.js"></script>
     <script type="module" src="./scripts/calendar.js"></script>
     <script type="module" src="./scripts/charts.js"></script>
-  </body>
 </html>
