@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>e-DUK - Home</title>
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <img src="./assets/img/logo.svg" alt="" class="logo" />
+        <div class="search">
+          <button id="hamburguerMenu" class="button header__button">
+            <img src="./assets/icons/bars-solid.svg" alt="iconeMenu" />
+          </button>
+          <input type="text" placeholder="O que procura?" id="mainSearchBar" />
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <aside id="leftMenu"></aside>
+      <section id="appItems">
+        <section class="applicationBox">
+          <div class="userResume">
+            <div>
+              <img src="./assets/img/160801224.jpeg" alt="" />
+            </div>
+            <div class="userInfos">
+              <p>Nome: Bruno</p>
+              <p>Cargo: Secretário</p>
+              <p>Matrícula: 1230-44</p>
+            </div>
+          </div>
+          <div class="menu__buttons user__buttons">
+            <button class="button">Matrículas</button>
+            <button class="button">Grade</button>
+            <button class="button">Informações</button>
+          </div>
+        </section>
+
+        <section>
+          <section class="applicationBox calendarBox">
+            <h3 id="monthAndYear"></h3>
+            <div class="calendarButtons">
+              <button id="previous"><</button>
+              <button id="next">></button>
+            </div>
+            <table id="calendar" class="calendarHead">
+              <thead id="theadMonth"></thead>
+              <tbody id="calendarBody"></tbody>
+            </table>
+            <div class="footer-container-calendar">
+              <label for="month">Ir para: </label>
+              <select id="month">
+                <option value="0">Jan</option>
+                <option value="1">Fev</option>
+                <option value="2">Mar</option>
+                <option value="3">Abr</option>
+                <option value="4">Mai</option>
+                <option value="5">Jun</option>
+                <option value="6">Jul</option>
+                <option value="7">Ago</option>
+                <option value="8">Set</option>
+                <option value="9">Out</option>
+                <option value="10">Nov</option>
+                <option value="11">Dez</option>
+              </select>
+              <select id="year"></select>
+            </div>
+          </section>
+
+          <section class="applicationBox chartBox">
+            <canvas id="chart"></canvas>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <p>Versão 1.0.0</p>
+      <p>Atualizado em 00/00/0000</p>
+    </footer>
+    <script type="module" src="./scripts/application.js"></script>
+    <script type="module" src="./scripts/calendar.js"></script>
+    <script type="module" src="./scripts/charts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+body {
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: "Nunito", sans-serif;
+}
+
+main {
+  min-height: max-content;
+}
+
+aside {
+  width: 320px;
+}
+
+#appItems {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.applicationBox {
+  background-color: var(--color-1);
+  border-radius: var(--radius-2);
+  padding: 16px;
+  width: inherit;
+  margin: 16px 0 16px 0;
+}
+
+.applicationBox img {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+}
+
+.applicationBox .userResume {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.applicationBox .userInfos {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+}
+
+.userButtonsList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu__buttons > button {
+  background-color: var(--color-2);
+}
+
+.chartBox {
+  height: 20rem;
+  display: flex;
+}
+
+canvas {
+  height: 100px;
+  width: 100px;
+}
+
+footer {
+  background-color: var(--color-1);
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  margin-top: 32px;
+}

@@ -1,0 +1,22 @@
+:root {
+  --color-1: #aad7e6;
+  --color-2: #87cdeb;
+  --color-3: #4169e1;
+  --color-4: #695acd;
+  --color-5: #8728e1;
+  --color-6: #9be7ff;
+  --color-7: #183dff;
+  --color-8: #d3b2a1;
+
+  --radius-1: 16px;
+  --radius-2: 8px;
+  --radius-3: 4px;
+}
+
+button {
+  border-radius: var(--radius-1);
+  height: 3rem;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+}
