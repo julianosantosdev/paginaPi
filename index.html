@@ -11,12 +11,13 @@
     <header>
       <nav class="container">
         <img src="./assets/img/logo.svg" alt="" class="logo" />
-        <div class="search">          
-          <img src="./assets/img/160801224.jpeg" alt="profileimg" id="profile">
+        <div class="search">
           <button id="hamburguerMenu" class="button header__button">
             <img src="./assets/icons/bars-solid.svg" alt="iconeMenu" />
           </button>
-          <input type="text" placeholder="O que procura?" id="mainSearchBar" />
+          <button id="logout" class="button header__button">
+            <img src="./assets/icons/logoutIcon.svg" alt="logoutIcon" />
+          </button>
         </div>
       </nav>
     </header>
@@ -37,19 +38,11 @@
           </div>
           <div class="menu__buttons user__buttons">
             <button class="button">
-              <img
-                src="./assets/icons/school-lock-solid.svg"
-                alt=""
-              />Matrículas
+              <img src="./assets/icons/graduation-cap-solid.svg" alt="" />Editar
+              Dados
             </button>
             <button class="button">
-              <img src="./assets/icons/graduation-cap-solid.svg" alt="" />Grade
-            </button>
-            <button class="button">
-              <img
-                src="./assets/icons/school-lock-solid.svg"
-                alt=""
-              />Informações
+              <img src="./assets/icons/info-circle.svg" alt="" />Informações
             </button>
           </div>
         </section>
@@ -83,6 +76,28 @@
               </select>
               <select id="year"></select>
             </div>
+            <div>
+              <form>
+                <input class="eventInput" type="date" id="eventDate" />
+                <input
+                  class="eventInput"
+                  type="text"
+                  placeholder="Título do Evento"
+                  id="eventTitle"
+                />
+                <input
+                  class="eventInput"
+                  type="text"
+                  placeholder="Descrição do evento"
+                  id="eventDescription"
+                />
+                <button id="addEvent">Adicionar</button>
+              </form>
+              <div id="eventsSection">
+                <h2>Eventos e Lembretes</h2>
+                <ul id="eventsList"></ul>
+              </div>
+            </div>
           </section>
 
           <section class="applicationBox chartBox">
@@ -101,7 +116,7 @@
         <a
           href="https://github.com/DSM-Grupo-06-Projeto-Integrador-2024/dsm-grupo-6-pi"
         >
-          <img src="./assets/icons/github.svg" alt="github icon" /> 
+          <img src="./assets/icons/github.svg" alt="github icon" />
         </a>
       </div>
       <div class="appInfos">
@@ -109,12 +124,11 @@
         <small>Atualizado em 14/07/24</small>
       </div>
       <div>
-        <small>Made with &#x2764 by FATEC-ARARAS 2024</small>
+        <small>Made with by FATEC-ARARAS 2024</small>
       </div>
     </footer>
-    
   </body>
-    <script type="module" src="./scripts/application.js"></script>
-    <script type="module" src="./scripts/calendar.js"></script>
-    <script type="module" src="./scripts/charts.js"></script>
+  <script type="module" src="./scripts/application.js"></script>
+  <script type="module" src="./scripts/calendar.js"></script>
+  <script type="module" src="./scripts/charts.js"></script>
 </html>

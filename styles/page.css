@@ -9,8 +9,13 @@ button {
   font-family: "Nunito", sans-serif;
 }
 
+input {
+  font-family: "Nunito", sans-serif;
+}
+
 main {
-  min-height: max-content;
+  max-width: 1400px;
+  padding: 0 16px;
 }
 
 aside {
@@ -28,7 +33,7 @@ aside {
   border-radius: var(--radius-2);
   padding: 16px;
   width: inherit;
-  margin: 16px 0 16px 0;
+  margin: 16px 0 0px 0;
 }
 
 #userImg {

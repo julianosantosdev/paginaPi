@@ -1,3 +1,102 @@
+let events = [
+  { date: "2024-06-17", description: "17h30", id: 0, title: "Reunião de Pais" },
+  { date: "2024-06-18", description: "17h30", id: 0, title: "Reunião de Pais" },
+  { date: "2024-06-15", description: "17h30", id: 0, title: "Reunião de Pais" },
+];
+
+const eventDateInput = document.getElementById("eventDate");
+const eventTitleInput = document.getElementById("eventTitle");
+const eventDescriptionInput = document.getElementById("eventDescription");
+const reminderList = document.getElementById("eventsList");
+const addEventButton = document.getElementById("addEvent");
+
+let eventIdCounter = 0;
+
+function addEvent() {
+  let date = eventDateInput.value;
+  let title = eventTitleInput.value;
+  let description = eventDescriptionInput.value;
+
+  if (date && title) {
+    let eventId = eventIdCounter++;
+
+    events.push({
+      id: eventId,
+      date: date,
+      title: title,
+      description: description,
+    });
+    showCalendar(currentMonth, currentYear);
+    eventDateInput.value = "";
+    eventTitleInput.value = "";
+    eventDescriptionInput.value = "";
+    displayReminders();
+  }
+}
+
+addEventButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  addEvent();
+  console.log(events);
+});
+
+function deleteEvent(eventId) {
+  let eventIndex = events.findIndex((event) => event.id === eventId);
+
+  if (eventIndex !== -1) {
+    events.splice(eventIndex, 1);
+    showCalendar(currentMonth, currentYear);
+    displayReminders();
+  }
+}
+
+function displayReminders() {
+  events.sort((a, b) => {
+    let d1 = new Date(a.date);
+    let d2 = new Date(b.date);
+
+    if (d1 > d2) {
+      return -1;
+    }
+
+    if (d2 < d1) {
+      return 1;
+    }
+  });
+
+  eventsList.innerHTML = "";
+
+  for (let i = 0; i < events.length; i++) {
+    let event = events[i];
+    let eventDate = new Date(event.date.replace(/-/g, "/").replace(/T.+/, ""));
+
+    if (
+      eventDate.getMonth() === currentMonth &&
+      eventDate.getFullYear() === currentYear
+    ) {
+      let listItem = document.createElement("li");
+      let deleteButton = document.createElement("button");
+      let deleteIcon = document.createElement("img");
+
+      listItem.classList.add("eventListItem");
+      listItem.innerHTML = `${eventDate.toLocaleDateString("pt-br")} - ${
+        event.title
+      } às ${event.description}`;
+
+      deleteButton.classList.add("deleteEventButton", "delete-event");
+      deleteIcon.src = "./../assets/icons/trash-solid.svg";
+
+      deleteButton.onclick = function () {
+        deleteEvent(event.id);
+      };
+
+      deleteButton.append(deleteIcon);
+      listItem.appendChild(deleteButton);
+      reminderList.appendChild(listItem);
+    }
+  }
+}
+
 const generateYearRange = (start, end) => {
   let years = "";
   for (let year = start; year <= end; year++) {
@@ -120,12 +219,10 @@ function showCalendar(month, year) {
           cell.className = "date-picker selected";
         }
 
-        // Check if there are events on this date
-
-        // if (hasEventOnDate(date, month, year)) {
-        //   cell.classList.add("event-marker");
-        //   cell.appendChild(createEventTooltip(date, month, year));
-        // }
+        if (hasEventOnDate(date, month, year)) {
+          cell.classList.add("event-marker");
+          cell.appendChild(createEventTooltip(date, month, year));
+        }
 
         row.appendChild(cell);
         date++;
@@ -134,9 +231,41 @@ function showCalendar(month, year) {
     tbl.appendChild(row);
   }
 
-  // displayReminders();
+  displayReminders();
+}
+
+function createEventTooltip(date, month, year) {
+  let tooltip = document.createElement("div");
+  tooltip.className = "event-tooltip";
+  let eventsOnDate = getEventsOnDate(date, month, year);
+  for (let i = 0; i < eventsOnDate.length; i++) {
+    let event = eventsOnDate[i];
+    let eventDate = new Date(event.date.replace(/-/g, "/").replace(/T.+/, ""));
+    let eventText = `${event.title} às ${event.description}`;
+    let eventElement = document.createElement("p");
+    eventElement.innerHTML = eventText;
+    tooltip.appendChild(eventElement);
+  }
+  return tooltip;
+}
+
+function getEventsOnDate(date, month, year) {
+  return events.filter(function (event) {
+    let eventDate = new Date(event.date.replace(/-/g, "/").replace(/T.+/, ""));
+    return (
+      eventDate.getDate() === date &&
+      eventDate.getMonth() === month &&
+      eventDate.getFullYear() === year
+    );
+  });
+}
+
+function hasEventOnDate(date, month, year) {
+  return getEventsOnDate(date, month, year).length > 0;
 }
 
 function daysInMonth(iMonth, iYear) {
   return 32 - new Date(iYear, iMonth, 32).getDate();
 }
+
+showCalendar(currentMonth, currentYear);
