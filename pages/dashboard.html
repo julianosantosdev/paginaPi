@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>e-DUK - Home</title>
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <img src="../assets/img/logo.svg" alt="" class="logo" />
+        <div class="search">
+          <button id="hamburguerMenu" class="button header__button">
+            <img src="../assets/icons/bars-solid.svg" alt="iconeMenu" />
+          </button>
+          <button id="logout" class="button header__button">
+            <img src="../assets/icons/logoutIcon.svg" alt="logoutIcon" />
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <aside id="leftMenu"></aside>
+      <section id="appItems">
+        <section class="applicationBox">
+          <div class="userResume">
+            <div>
+              <img src="../assets/img/160801224.jpeg" alt="" id="userImg" />
+            </div>
+            <div class="userInfos">
+              <p>Olá, Bruno!</p>
+              <p>Cargo: Secretário</p>
+              <p>Matrícula: 1230-44</p>
+            </div>
+          </div>
+          <div class="menu__buttons user__buttons">
+            <button class="button">
+              <img src="../assets/icons/graduation-cap-solid.svg" alt="" />Editar
+              Dados
+            </button>
+            <button class="button">
+              <img src="../assets/icons/info-circle.svg" alt="" />Informações
+            </button>
+          </div>
+        </section>
+
+        <section>
+          <section class="applicationBox calendarBox">
+            <h3 id="monthAndYear"></h3>
+            <div class="calendarButtons">
+              <button id="previous"><</button>
+              <button id="next">></button>
+            </div>
+            <table id="calendar" class="calendarHead">
+              <thead id="theadMonth"></thead>
+              <tbody id="calendarBody"></tbody>
+            </table>
+            <div class="footer-container-calendar">
+              <label for="month">Ir para: </label>
+              <select id="month">
+                <option value="0">Jan</option>
+                <option value="1">Fev</option>
+                <option value="2">Mar</option>
+                <option value="3">Abr</option>
+                <option value="4">Mai</option>
+                <option value="5">Jun</option>
+                <option value="6">Jul</option>
+                <option value="7">Ago</option>
+                <option value="8">Set</option>
+                <option value="9">Out</option>
+                <option value="10">Nov</option>
+                <option value="11">Dez</option>
+              </select>
+              <select id="year"></select>
+            </div>
+            <div>
+              <form>
+                <input class="eventInput" type="date" id="eventDate" />
+                <input
+                  class="eventInput"
+                  type="text"
+                  placeholder="Título do Evento"
+                  id="eventTitle"
+                />
+                <input
+                  class="eventInput"
+                  type="text"
+                  placeholder="Descrição do evento"
+                  id="eventDescription"
+                />
+                <button id="addEvent">Adicionar</button>
+              </form>
+              <div id="eventsSection">
+                <h2>Eventos e Lembretes</h2>
+                <ul id="eventsList"></ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="applicationBox chartBox">
+            <canvas id="chart"></canvas>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <div class="logos">
+        <img src="../assets/icons/facebook.svg" alt="" />
+        <img src="../assets/icons/instagram.svg" alt="" />
+        <img src="../assets/icons/twitter.svg" alt="" />
+        <img src="../assets/icons/whatsapp.svg" alt="" />
+        <a
+          href="https://github.com/DSM-Grupo-06-Projeto-Integrador-2024/dsm-grupo-6-pi"
+        >
+          <img src="../assets/icons/github.svg" alt="github icon" />
+        </a>
+      </div>
+      <div class="appInfos">
+        <small>Versão 1.0.0</small>
+        <small>Atualizado em 14/07/24</small>
+      </div>
+      <div>
+        <small>Made with by FATEC-ARARAS 2024</small>
+      </div>
+    </footer>
+  </body>
+  <script type="module" src="../scripts/application.js"></script>
+  <script type="module" src="../scripts/calendar.js"></script>
+  <script type="module" src="../scripts/charts.js"></script>
+</html>

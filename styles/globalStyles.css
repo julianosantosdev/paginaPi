@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
 :root {
   --color-1: #cdcdcd;
-  --color-2: #bdbdbd;
+  --color-2: #aaaaaa;
   /* --color-1: #aad7e6; */
   /* --color-2: #87cdeb; */
   --color-3: #4169e1;
@@ -25,9 +27,21 @@ button {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  border: none;
+  cursor: pointer;
+  font-family: "Nunito", sans-serif;
 }
 
 button img {
   width: 24px;
   height: 24px;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+}
+
+input {
+  font-family: "Nunito", sans-serif;
 }

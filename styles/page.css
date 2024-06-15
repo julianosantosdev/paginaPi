@@ -1,18 +1,3 @@
-body {
-  font-family: "Nunito", sans-serif;
-  font-style: normal;
-}
-
-button {
-  border: none;
-  cursor: pointer;
-  font-family: "Nunito", sans-serif;
-}
-
-input {
-  font-family: "Nunito", sans-serif;
-}
-
 main {
   max-width: 1400px;
   padding: 0 16px;
@@ -73,30 +58,4 @@ aside {
 canvas {
   height: 100px;
   width: 100px;
-}
-
-footer {
-  background-color: var(--color-1);
-  min-height: fit-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  padding: 16px;
-  margin-top: 32px;
-}
-
-footer img {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-}
-
-footer .logos {
-  display: flex;
-  gap: 10px;
-}
-
-footer small {
-  font-size: 12px;
 }

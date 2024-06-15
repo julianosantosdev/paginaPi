@@ -18,7 +18,7 @@ const leftMenu = () => {
   buttonDocuments.innerText = "Documentos";
   buttonClose.innerText = "Fechar";
 
-  closeIcon.src = "./../assets/icons/xmark-solid.svg";
+  closeIcon.src = "../assets/icons/xmark-solid.svg";
 
   buttonClose.id = "closeMenuButton";
 
@@ -49,6 +49,14 @@ const leftMenu = () => {
   });
 };
 
+const logout = () => {
+  const logoutButton = document.getElementById("logout");
+  logoutButton.addEventListener("click", (event) => {
+    window.location.replace("../index.html");
+  });
+};
+
 leftMenu();
+logout();
 
 export { leftMenu };

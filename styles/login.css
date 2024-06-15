@@ -1,0 +1,149 @@
+body {
+  background-color: var(--color-2);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+main {
+  margin-top: 32px;
+  height: 72vh;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  background-color: white;
+  border-radius: var(--radius-1);
+  padding: 16px;
+  height: fit-content;
+  width: 100%;
+  max-width: 500px;
+  margin: 32px 0;
+}
+
+section div p {
+  font-size: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--color-1);
+}
+
+.formContainer {
+  margin-top: 16px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.inputForm {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.inputForm label {
+  font-size: 12px;
+  font-weight: 500;
+  padding-left: 4px;
+}
+
+.inputForm input {
+  background-color: var(--color-1);
+  border-radius: var(--radius-1);
+  height: 48px;
+  border: none;
+}
+
+.inputForm input::placeholder {
+  padding-left: 16px;
+}
+
+.inputCheck {
+  display: flex;
+  font-size: 12px;
+  padding-left: 4px;
+  align-items: center;
+  justify-content: start;
+}
+
+.inputCheck {
+  border-radius: 100%;
+}
+
+small {
+  font-size: 10px;
+}
+
+.loginFooter {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+  padding-left: 4px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-2);
+}
+
+@media (min-width: 840px) {
+  nav {
+    align-items: start;
+  }
+
+  section {
+    display: flex;
+    flex-direction: row-reverse;
+    max-width: 1000px;
+  }
+
+  section > div > p {
+    border-bottom: none;
+  }
+
+  .divLoginDescription {
+    border-left: 1px solid var(--color-1);
+    padding-left: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .formContainer,
+  section div {
+    width: 50%;
+  }
+
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+    padding-left: 64px;
+  }
+
+  form {
+    width: 80%;
+    display: flex;
+  }
+
+  .inputForm {
+    width: 100%;
+  }
+}
