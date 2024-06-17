@@ -39,6 +39,7 @@
 
   aside {
     width: 20rem;
+    padding-right: 0;
   }
 
   #appItems {
