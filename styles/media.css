@@ -37,15 +37,15 @@
     gap: 32px;
   }
 
-  #leftMenu {
-    width: 260px;
+  aside {
+    width: 20rem;
   }
 
   #appItems {
     width: 100%;
   }
 
-  .menu {
+  aside {
     z-index: 0;
     position: relative;
     box-shadow: none;

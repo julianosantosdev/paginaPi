@@ -1,5 +1,9 @@
 body {
   background-color: var(--color-2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
 nav {
@@ -28,8 +32,9 @@ section {
   border-radius: var(--radius-1);
   padding: 16px;
   height: fit-content;
+  min-width: 320px;
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   margin: 32px 0;
 }
 
@@ -44,7 +49,7 @@ section div p {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 600;
   text-align: center;
 }
@@ -63,7 +68,7 @@ form {
 }
 
 .inputForm label {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   padding-left: 4px;
 }
@@ -73,15 +78,13 @@ form {
   border-radius: var(--radius-1);
   height: 48px;
   border: none;
-}
-
-.inputForm input::placeholder {
   padding-left: 16px;
+  font-size: 18px;
 }
 
 .inputCheck {
   display: flex;
-  font-size: 12px;
+  font-size: 14px;
   padding-left: 4px;
   align-items: center;
   justify-content: start;
@@ -89,6 +92,10 @@ form {
 
 .inputCheck {
   border-radius: 100%;
+}
+
+button {
+  font-size: 20px;
 }
 
 small {
@@ -116,10 +123,18 @@ a {
     display: flex;
     flex-direction: row-reverse;
     max-width: 1000px;
+    min-width: 840px;
   }
 
-  section > div > p {
+  .divLoginDescription > p {
     border-bottom: none;
+    font-size: 20px;
+  }
+
+  .divLoginDescription span {
+    color: var(--color-1);
+    font-weight: 600;
+    font-size: 22px;
   }
 
   .divLoginDescription {
@@ -132,8 +147,8 @@ a {
   }
 
   .formContainer,
-  section div {
-    width: 50%;
+  .divLoginDescription {
+    min-width: 50%;
   }
 
   .formContainer {

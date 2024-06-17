@@ -1,48 +1,48 @@
 const leftMenu = () => {
-  const section = document.getElementById("leftMenu");
+  const aside = document.getElementById("leftMenu");
   const hamburguerMenu = document.getElementById("hamburguerMenu");
 
-  const menuSection = document.createElement("section");
-  const divButtons = document.createElement("div");
-  const divCloseButton = document.createElement("div");
-  const buttonClass = document.createElement("button");
-  const buttonSecretary = document.createElement("button");
-  const buttonTeacher = document.createElement("button");
-  const buttonDocuments = document.createElement("button");
-  const buttonClose = document.createElement("button");
-  const closeIcon = document.createElement("img");
+  // const menuSection = document.createElement("section");
+  // const divButtons = document.createElement("div");
+  // const divCloseButton = document.createElement("div");
+  // const buttonClass = document.createElement("button");
+  // const buttonSecretary = document.createElement("button");
+  // const buttonTeacher = document.createElement("button");
+  // const buttonDocuments = document.createElement("button");
+  // const buttonClose = document.createElement("button");
+  // const closeIcon = document.createElement("img");
 
-  buttonClass.innerText = "Classes";
-  buttonSecretary.innerText = "Secretaria";
-  buttonTeacher.innerText = "Professores";
-  buttonDocuments.innerText = "Documentos";
-  buttonClose.innerText = "Fechar";
+  // buttonClass.innerText = "Classes";
+  // buttonSecretary.innerText = "Secretaria";
+  // buttonTeacher.innerText = "Professores";
+  // buttonDocuments.innerText = "Documentos";
+  // buttonClose.innerText = "Fechar";
 
-  closeIcon.src = "../assets/icons/xmark-solid.svg";
+  // closeIcon.src = "../assets/icons/xmark-solid.svg";
 
-  buttonClose.id = "closeMenuButton";
+  // buttonClose.id = "closeMenuButton";
 
-  menuSection.classList.add("menu", "menu__hidden");
-  divButtons.classList.add("menu__buttons");
+  // menuSection.classList.add("menu", "menu__hidden");
+  // divButtons.classList.add("menu__buttons");
 
-  buttonClose.append(closeIcon);
+  // buttonClose.append(closeIcon);
 
-  divButtons.append(
-    buttonClass,
-    buttonSecretary,
-    buttonTeacher,
-    buttonDocuments
-  );
-  divCloseButton.append(buttonClose);
+  // divButtons.append(
+  //   buttonClass,
+  //   buttonSecretary,
+  //   buttonTeacher,
+  //   buttonDocuments
+  // );
+  // divCloseButton.append(buttonClose);
 
-  menuSection.append(divButtons, divCloseButton);
-  section.append(menuSection);
+  // menuSection.append(divButtons, divCloseButton);
+  // aside.append(menuSection);
 
   hamburguerMenu.addEventListener("click", (event) => {
-    menuSection.classList.toggle("menu__hidden");
+    aside.classList.toggle("menu__hidden");
   });
 
-  menuSection.addEventListener("click", (event) => {
+  aside.addEventListener("click", (event) => {
     if (event.currentTarget != event.target) {
       menuSection.classList.toggle("menu__hidden");
     }
