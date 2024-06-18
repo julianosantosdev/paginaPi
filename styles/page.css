@@ -47,8 +47,34 @@ main {
 }
 
 .chartBox {
-  height: 20rem;
+  height: 365px;
+}
+
+.chartContainer {
+  height: 80%;
+}
+
+#chartAndStudents {
+  width: 100%;
+}
+
+.studentsContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 16px;
+}
+
+#studentsList {
+  background-color: var(--color-2);
+  padding: 16px 8px;
+  border-radius: var(--radius-2);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+#studentsList {
+  font-weight: 600;
 }

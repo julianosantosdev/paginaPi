@@ -44,5 +44,6 @@ leftMenu();
 logout();
 showModal();
 closeModal();
+getNames();
 
 export { leftMenu };
