@@ -50,6 +50,11 @@ a {
   gap: 10px;
 }
 
+.menuItem img {
+  width: 24px;
+  height: 24px;
+}
+
 .menuItem > div {
   display: flex;
   margin-left: 50px;

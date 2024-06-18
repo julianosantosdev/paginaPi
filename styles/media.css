@@ -70,6 +70,11 @@
     max-width: 50%;
   }
 
+  .chartContainer {
+    position: relative;
+    height: 100%;
+  }
+
   #hamburguerMenu,
   #closeMenuButton {
     display: none;

@@ -1,7 +1,7 @@
 let events = [
-  { date: "2024-06-17", description: "17h30", id: 0, title: "Reunião de Pais" },
+  { date: "2024-06-28", description: "17h30", id: 0, title: "Fechamento de notas" },
   { date: "2024-06-18", description: "17h30", id: 0, title: "Reunião de Pais" },
-  { date: "2024-06-15", description: "17h30", id: 0, title: "Reunião de Pais" },
+  { date: "2024-06-15", description: "18h30", id: 0, title: "Reunião de Professores" },
 ];
 
 const eventDateInput = document.getElementById("eventDate");
@@ -81,7 +81,7 @@ function displayReminders() {
       listItem.classList.add("eventListItem");
       listItem.innerHTML = `${eventDate.toLocaleDateString("pt-br")} - ${
         event.title
-      } às ${event.description}`;
+      } - ${event.description}`;
 
       deleteButton.classList.add("deleteEventButton", "delete-event");
       deleteIcon.src = "./../assets/icons/trash-solid.svg";
@@ -241,7 +241,7 @@ function createEventTooltip(date, month, year) {
   for (let i = 0; i < eventsOnDate.length; i++) {
     let event = eventsOnDate[i];
     let eventDate = new Date(event.date.replace(/-/g, "/").replace(/T.+/, ""));
-    let eventText = `${event.title} às ${event.description}`;
+    let eventText = `${event.title} - ${event.description}`;
     let eventElement = document.createElement("p");
     eventElement.innerHTML = eventText;
     tooltip.appendChild(eventElement);

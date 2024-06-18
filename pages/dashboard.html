@@ -28,7 +28,7 @@
           <h2>MENU</h2>
           <div class="menuItem">
             <p>
-              <img src="../assets/icons/eye-solid.svg" alt="" />Visualizar
+              <img src="../assets/icons/eye-solid.svg" alt="eye icon" />Visualizar
               Classes
             </p>
             <div>
@@ -60,6 +60,15 @@
               <a href="">Disciplinas</a>
             </div>
           </div>
+
+          <div class="menuItem">
+            <p>
+              <img src="../assets/icons/sms-solid.svg" alt="" />Comunicação SMS
+            </p>
+            <div>
+              <a href="">Enviar SMS</a>
+            </div>
+          </div>
         </div>
       </aside>
       <section id="appItems">
@@ -89,6 +98,7 @@
 
         <section>
           <section class="applicationBox calendarBox">
+            <p class="calendarTitle">CALENDÁRIO DE EVENTOS</p>
             <h3 id="monthAndYear"></h3>
             <div class="calendarButtons">
               <button id="previous"><</button>
@@ -128,20 +138,23 @@
                 <input
                   class="eventInput"
                   type="text"
-                  placeholder="Descrição do evento"
+                  placeholder="Descrição do evento / horário"
                   id="eventDescription"
                 />
                 <button id="addEvent">Adicionar</button>
               </form>
               <div id="eventsSection">
-                <h2>Eventos e Lembretes</h2>
+                <h2 class="calendarTitle">EVENTOS CADASTRADOS</h2>
                 <ul id="eventsList"></ul>
               </div>
             </div>
           </section>
 
           <section class="applicationBox chartBox">
-            <canvas id="chart"></canvas>
+            <p class="calendarTitle">ESTATÍSTICAS ESCOLARES</p>
+            <div class="chartContainer">
+              <canvas id="chart"> </canvas>
+            </div>
           </section>
         </section>
       </section>
