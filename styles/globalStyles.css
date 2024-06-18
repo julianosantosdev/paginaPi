@@ -1,20 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 :root {
+  /* 
+  --brand-color-1: #000000;
+  --brand-color-2:  #000000;
+  --color-1: #4169e1;
+  --color-2: #695acd;
+  --color-3: #8728e1;
+  --color-4: #9be7ff;
+  --color-5: #183dff;
+
+  --color-hover: #000000
+  --color-click: #000000 
+  */
+  --color-white: #ffffff;
+  --color-black: #2d2d2d;
+
   --color-1: #cdcdcd;
   --color-2: #aaaaaa;
   /* --color-1: #aad7e6; */
   /* --color-2: #87cdeb; */
-  --color-3: #4169e1;
-  --color-4: #695acd;
-  --color-5: #8728e1;
-  --color-6: #9be7ff;
-  --color-7: #183dff;
-  --color-8: #d3b2a1;
 
   --radius-1: 16px;
   --radius-2: 8px;
   --radius-3: 4px;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: var(--color-black);
 }
 
 button {
@@ -33,13 +47,8 @@ button {
 }
 
 button img {
-  width: 24px;
-  height: 24px;
-}
-
-body {
-  font-family: "Nunito", sans-serif;
-  font-style: normal;
+  width: 20px;
+  height: 20px;
 }
 
 input {

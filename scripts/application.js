@@ -20,7 +20,29 @@ const logout = () => {
   });
 };
 
+const showModal = () => {
+  const sendSMS = document.getElementById("sendSMS");
+  const modal = document.querySelector(".modalContainer");
+
+  sendSMS.addEventListener("click", (event) => {
+    event.preventDefault();
+    modal.classList.toggle("hidden");
+    console.log("ok");
+  });
+};
+
+const closeModal = () => {
+  const closeModalButton = document.getElementById("closeModal");
+  const modal = document.querySelector(".modalContainer");
+
+  closeModalButton.addEventListener("click", (event) => {
+    modal.classList.toggle("hidden");
+  });
+};
+
 leftMenu();
 logout();
+showModal();
+closeModal();
 
 export { leftMenu };

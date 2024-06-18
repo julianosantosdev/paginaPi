@@ -8,6 +8,29 @@
     <title>e-DUK - Home</title>
   </head>
   <body>
+    <section class="modalContainer hidden">
+      <div class="modalBody">
+        <div class="modalHeader">
+          <p>Envio de SMS</p>
+          <button id="closeModal">X</button>
+        </div>
+        <div class="modalMain">
+          <form action="">
+            <input
+              class="eventInput"
+              type="number"
+              placeholder="Numero do celular"
+            />
+            <textarea
+              placeholder="Escreva aqui a mensagem..."
+              name=""
+              id=""
+            ></textarea>
+            <button>ENVIAR SMS</button>
+          </form>
+        </div>
+      </div>
+    </section>
     <header>
       <nav class="container">
         <img src="../assets/img/logo.svg" alt="" class="logo" />
@@ -28,8 +51,10 @@
           <h2>MENU</h2>
           <div class="menuItem">
             <p>
-              <img src="../assets/icons/eye-solid.svg" alt="eye icon" />Visualizar
-              Classes
+              <img
+                src="../assets/icons/eye-solid.svg"
+                alt="eye icon"
+              />Visualizar Classes
             </p>
             <div>
               <a href="">1a Série EM</a>
@@ -66,7 +91,7 @@
               <img src="../assets/icons/sms-solid.svg" alt="" />Comunicação SMS
             </p>
             <div>
-              <a href="">Enviar SMS</a>
+              <a id="sendSMS">Enviar SMS</a>
             </div>
           </div>
         </div>
@@ -155,6 +180,7 @@
             <div class="chartContainer">
               <canvas id="chart"> </canvas>
             </div>
+            
           </section>
         </section>
       </section>

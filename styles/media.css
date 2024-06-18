@@ -79,4 +79,8 @@
   #closeMenuButton {
     display: none;
   }
+
+  .modalBody {
+    max-width: 800px;
+  }
 }
