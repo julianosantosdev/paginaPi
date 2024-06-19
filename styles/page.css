@@ -1,6 +1,7 @@
 main {
   max-width: 1400px;
   padding: 0 16px;
+  margin-top: 120px;
 }
 
 #appItems {
@@ -15,6 +16,7 @@ main {
   padding: 16px;
   width: inherit;
   margin: 16px 0 0px 0;
+  border: 1px solid var(--color-2);
 }
 
 #userImg {
@@ -65,16 +67,14 @@ main {
 }
 
 #studentsList {
-  background-color: var(--color-2);
-  padding: 16px 8px;
+  background-color: #757575;
+  color: var(--color-white);
+  padding: 16px 16px;
   border-radius: var(--radius-2);
   display: flex;
   flex-direction: column;
   gap: 12px;
   overflow-y: auto;
   max-height: 400px;
-}
-
-#studentsList {
   font-weight: 600;
 }

@@ -2,24 +2,15 @@
 
 :root {
   /* 
-  --brand-color-1: #000000;
-  --brand-color-2:  #000000;
-  --color-1: #4169e1;
-  --color-2: #695acd;
-  --color-3: #8728e1;
-  --color-4: #9be7ff;
-  --color-5: #183dff;
-
   --color-hover: #000000
   --color-click: #000000 
   */
   --color-white: #ffffff;
   --color-black: #2d2d2d;
 
-  --color-1: #cdcdcd;
-  --color-2: #aaaaaa;
-  /* --color-1: #aad7e6; */
-  /* --color-2: #87cdeb; */
+  --color-1: #dbf4ff;
+  --color-2: #87cdeb;
+  --color-3: #aed8e6;
 
   --radius-1: 16px;
   --radius-2: 8px;
@@ -32,6 +23,7 @@ body {
 }
 
 button {
+  background-color: var(--color-2);
   border-radius: var(--radius-1);
   height: 3rem;
   width: 100%;
