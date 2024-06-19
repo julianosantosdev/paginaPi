@@ -7,7 +7,7 @@ const leftMenu = () => {
   });
 
   body.addEventListener("click", (event) => {
-    if (event.clientX > 250 && !aside.classList.contains("menu__hidden")) {
+    if (event.clientX > 250 && !aside.classList.contains("menu__hidden") && event.target != hamburguerMenu) {
       aside.classList.toggle("menu__hidden");
     }
   });
