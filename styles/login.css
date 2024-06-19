@@ -74,10 +74,9 @@ form {
 }
 
 .inputForm input {
-  background-color: var(--color-1);
+  border: 1px solid var(--color-3);
   border-radius: var(--radius-1);
   height: 48px;
-  border: none;
   padding-left: 16px;
   font-size: 18px;
 }
@@ -114,6 +113,15 @@ a {
   color: var(--color-2);
 }
 
+
+.divLoginDescription span {
+  color: #0087cb;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+
+
 @media (min-width: 840px) {
   nav {
     align-items: start;
@@ -129,12 +137,6 @@ a {
   .divLoginDescription > p {
     border-bottom: none;
     font-size: 20px;
-  }
-
-  .divLoginDescription span {
-    color: var(--color-1);
-    font-weight: 600;
-    font-size: 22px;
   }
 
   .divLoginDescription {

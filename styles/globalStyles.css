@@ -36,6 +36,11 @@ button {
   border: none;
   cursor: pointer;
   font-family: "Nunito", sans-serif;
+  transition: 250ms;
+}
+
+button:hover {
+  background-color: var(--color-3);
 }
 
 button img {
@@ -45,4 +50,5 @@ button img {
 
 input {
   font-family: "Nunito", sans-serif;
+  box-sizing: border-box;
 }

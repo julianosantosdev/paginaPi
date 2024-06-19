@@ -122,18 +122,20 @@
 }
 
 .eventInput {
-  /* width: 100%; se o input do calendário quebrar, descomentar essa linha*/
+  width: 100%;
   height: 2.5rem;
   border: none;
-  border-radius: var(--radius-2);
+  border-radius: var(--radius-1);
+  padding: 0 20px 0 20px;
+
 }
 
-.eventInput::placeholder {
-  padding-left: 16px;
+#month,
+#year {
+  background-color: var(--color-white);
 }
 
 .eventInput[type="date"] {
-  padding: 20px;
   box-sizing: border-box;
   color: gray;
 }

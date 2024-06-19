@@ -44,10 +44,6 @@ main {
   gap: 8px;
 }
 
-.menu__buttons > button {
-  background-color: var(--color-2);
-}
-
 .chartBox {
   height: 365px;
 }
@@ -67,8 +63,8 @@ main {
 }
 
 #studentsList {
-  background-color: #757575;
-  color: var(--color-white);
+  background-color: #ffffff;
+  /* color: var(--color-white); */
   padding: 16px 16px;
   border-radius: var(--radius-2);
   display: flex;
@@ -77,4 +73,8 @@ main {
   overflow-y: auto;
   max-height: 400px;
   font-weight: 600;
+}
+
+#studentsList > li {
+  cursor: pointer;
 }
